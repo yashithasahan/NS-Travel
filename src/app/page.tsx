@@ -1,4 +1,5 @@
 import Destinations from "@/components/home/Destination";
+import Explore from "@/components/home/Explore";
 import Image from "next/image";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <div className="max-w-[1440px] mx-auto flex flex-col items-center justify-center p-2 ">
         <Destinations />
       </div>
+      <Explore />
     </div>
   );
 }
