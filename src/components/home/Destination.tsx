@@ -41,8 +41,8 @@ const DestinationCard: React.FC<DestinationProps> = ({ id, name, image }) => {
       <Image
         className="group-hover:scale-200 transition-transform duration-200 ease-in-out"
         src={`${image}`}
-        width={300}
-        height={300}
+        width={275}
+        height={400}
         alt={name}
       />
       <h3 className="absolute bottom-8 left-4 text-white font-black text-5xl group-hover:scale-105 trasnlate-y-16 transition-transform duration-200 ease-in-out ">
