@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { SectionTitle } from "../common/titles/SectionTitle";
 
 const destinationsData = [
   { id: 1, name: "Kandy", image: "/images/destinations/kandy.png" },
@@ -16,9 +17,14 @@ interface DestinationProps {
 
 const Destinations = () => {
   return (
-    <div className="">
-      <h2 className="text-xl text-left font-bold pb-2 ">Top Destinations</h2>
-      <div className="w-max grid grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="max-w-[1440px] mx-auto flex flex-col  p-4 ">
+      <SectionTitle
+        title="Top Destinations"
+        url=""
+        action="Explore More"
+      ></SectionTitle>
+
+      <div className=" grid grid-cols-2 md:grid-cols-4 mx-auto justify-items-center w-full gap-4 ">
         {destinationsData.map((destination) => (
           <DestinationCard
             key={destination.id}
@@ -35,17 +41,17 @@ const Destinations = () => {
 const DestinationCard: React.FC<DestinationProps> = ({ id, name, image }) => {
   return (
     <div
-      className="rounded-2xl overflow-hidden relative w-[275px] h-[400px] group cursor-pointer"
+      className="rounded-2xl overflow-hidden relative max-w-[275px] max-h-[400px] group cursor-pointer "
       key={id}
     >
       <Image
-        className="group-hover:scale-200 transition-transform duration-200 ease-in-out"
+        className="group-hover:scale-200 transition-transform duration-200 ease-in-out object-contain"
         src={`${image}`}
         width={275}
         height={400}
         alt={name}
       />
-      <h3 className="absolute bottom-8 left-4 text-white font-black text-5xl group-hover:scale-105 trasnlate-y-16 transition-transform duration-200 ease-in-out ">
+      <h3 className="absolute bottom-8 left-4 text-white font-black text-2xl md:text-3xl lg:text-5xl group-hover:scale-105 trasnlate-y-16 transition-transform duration-200 ease-in-out ">
         {name}
       </h3>
     </div>
