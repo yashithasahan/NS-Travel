@@ -1,4 +1,5 @@
 import Destinations from "@/components/home/Destination";
+import { Subscribe } from "@/components/home/Subscribe";
 // import Explore from "@/components/home/Explore";
 import Image from "next/image";
 
@@ -36,6 +37,7 @@ export default function Home() {
       <div className="max-w-[1440px] mx-auto flex flex-col items-center justify-center p-2 ">
         {/* <Destinations /> */}
       </div>
+      <Subscribe />
     </div>
   );
 }
