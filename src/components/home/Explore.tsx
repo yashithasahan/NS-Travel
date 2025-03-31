@@ -19,7 +19,7 @@ const Explore = () => {
       <h2 className="text-xl text-left font-bold pb-2 ">
         Explore what you can have
       </h2>
-      <div className="w-full relative flex flex-row h-[440px] bg-green-300">
+      <div className="w-full  flex flex-row h-[440px] overflow-x-auto bg-green-300 gap-4">
         {exploreData.map((expo) => (
           <ExploreCard
             key={expo.id}
@@ -36,7 +36,7 @@ const Explore = () => {
 const ExploreCard: React.FC<ExploreProps> = ({ id, name, image }) => {
   return (
     <div
-      className="h-full w-[1000px] bg-amber-400 border border-2-black "
+      className="h-full w-[1000px] flex-shrink-0 bg-amber-400 border border-2-black "
       key={id}
     >
       <Image
