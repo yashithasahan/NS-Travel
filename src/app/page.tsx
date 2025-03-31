@@ -1,4 +1,5 @@
-import Explore from "@/components/home/Explore";
+import Destinations from "@/components/home/Destination";
+// import Explore from "@/components/home/Explore";
 import Image from "next/image";
 
 export default function Home() {
@@ -8,7 +9,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/100 via-white/5 to-white/0 opacity-100"></div>
 
         <Image
-          src={"/images/banners/sigiriya.jpg"}
+          src={"/images/banners/banner-sigiriaya.png"}
           width={1440}
           height={2440}
           className="min-h-[75vh] w-full object-cover object-center "
@@ -28,10 +29,10 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className="max-w-[1440px] mx-auto flex flex-col items-center justify-center p-2 ">
-        {/* <Destinations /> */}
+      <div className="">
+        <Destinations />
       </div>
-      <Explore />
+      {/* <Explore /> */}
       <div className="max-w-[1440px] mx-auto flex flex-col items-center justify-center p-2 ">
         {/* <Destinations /> */}
       </div>
